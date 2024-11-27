@@ -1,0 +1,81 @@
+.top-movie-section {
+  background-color: #37302c;
+  padding: 50px 0;
+}
+
+.top-movie-container {
+  padding: 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.top-movie-title {
+  font-family: 'Oswald', sans-serif;
+  color: #dfe0e2;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+#top-movie-app:hover .top-movie-list {
+  animation-play-state: paused;
+}
+
+.top-movie-list {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  width: 100%;
+  animation: x-scroll 60s linear infinite;
+}
+
+.movie-card {
+  width: 250px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.movie-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes x-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.top-movie-btn {
+  display: inline-block;
+  background-color: #a45827;
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  color: #dfe0e2;
+  border-radius: 7px;
+  padding: 10px 16px;
+  transition: all 350ms ease-in-out;
+}
+
+.top-movie-btn:hover {
+  background-color: #dfe0e2;
+  color: #a45827;
+}

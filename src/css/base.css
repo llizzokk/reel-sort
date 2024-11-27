@@ -14,18 +14,25 @@
   -webkit-text-size-adjust: 100%;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #576435;
+  background-color: #a45827;
   display: flex;
   flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
   margin: 0;
 }
 
 main {
   flex-grow: 1;
 }
+
 main:has(.back-link) {
   text-align: center;
 }
