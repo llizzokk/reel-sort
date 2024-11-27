@@ -6,8 +6,19 @@
   <link rel="icon" type="image/svg+xml" href="/vanilla-app-template/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ReelSort</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@700&family=Parkinsans:wght@800&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@800&display=swap"
+    rel="stylesheet">
   <script type="module" crossorigin src="/vanilla-app-template/index.js"></script>
-  <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/styles-DvPDDfy5.css">
+  <link rel="modulepreload" crossorigin href="/vanilla-app-template/assets/vendor-DzcBeMgS.js">
+  <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/styles-Cya-w2RA.css">
 </head>
 
 <body>
@@ -15,98 +26,40 @@
   <div class="container">
     <nav class="nav">
       <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="/vanilla-app-template/assets/sprite-E8vg0sBb.svg#logo"></use>
-        </svg>
+        Reel<span class="nav-logo-span">Sort</span>
       </a>
       <ul class="nav-list">
         <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+          <a class="nav-link {=$highlight-act}" href="./page-2.html">Genres</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Top</a>
         </li>
       </ul>
     </nav>
   </div>
 </header>
 
-
   <main>
-    <!-- Loads the specified .html file -->
-    <section class="vite-promo">
-  <div class="container">
-    <div class="vite-promo-thumb">
-      <a
-        class="vite-promo-link"
-        href="https://vitejs.dev/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Link to Vite official website"
-        title="Vite.js  build tool"
-      >
-        <!-- Path to images as from index.html file -->
-        <img
-          class="pic"
-          src="/vanilla-app-template/assets/vite-logo-9o_aqrTe.png"
-          alt="Vite logo"
-          width="640"
-          height="640"
-        />
-      </a>
-    </div>
-    <h1 class="main-title">
-      <span class="main-title-gradient">Vite</span>
-      Template by
-      <a
-        class="main-title-link"
-        href="https://github.com/goitacademy/vanilla-app-template"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT
-      </a>
-    </h1>
-  </div>
-</section>
+    <section class="section hero-section">
+      <div class="container hero-container">
+        <h1 class="hero-title">Your guide to the world of cinema.</h1>
+        <p class="hero-text">Thousands of movies are waiting to tell you their stories. Choose a genre, add a touch of
+          mood — and enjoy!</p>
+        <img src="/vanilla-app-template/assets/hero-Bb5WKFsc.jpg" alt="film" width="579" height="555" class="hero-img">
+      </div>
+    </section>
+    <section class="section top-movie-section">
+      <div class="container top-movie-container">
+        <h2 class="top-movie-title">Top 20 Movies of the Week</h2>
+        <div id="top-movie-app">
+          <ul class="top-movie-list"></ul>
+        </div>
 
-    <article class="badges">
-  <div class="container">
-    <ul class="badges-list">
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-html-inject"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          HTML Inject
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-full-reload"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Full Reload
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/postcss-sort-media-queries"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Sort Media Queries
-        </a>
-      </li>
-    </ul>
-  </div>
-</article>
-
+        <a href="./page-3.html" class="top-movie-btn">See more</a>
+      </div>
+    </section>
+    <section class="section genres-section"></section>
   </main>
 
   <footer class="footer">
