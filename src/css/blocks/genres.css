@@ -1,0 +1,60 @@
+.section {
+}
+
+.genres-section {
+}
+
+.container {
+}
+
+.genres-container {
+  display: flex;
+  padding: 0;
+}
+
+.genres-img {
+}
+
+.genres-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+}
+
+.genres-title {
+  font-family: 'Oswald', sans-serif;
+  color: #dfe0e2;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.genres-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.genres-item {
+  text-align: center;
+  background-color: #37302c;
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  color: #dfe0e2;
+  border-radius: 4px;
+  width: 180px;
+  padding: 8px 16px;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease,
+    background-color 350ms ease-in-out, color 350ms ease-in-out;
+}
+
+.genres-item:hover {
+  background-color: #dfe0e2;
+  color: #37302c;
+}
