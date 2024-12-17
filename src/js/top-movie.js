@@ -16,12 +16,24 @@ async function serviceMovie() {
     },
   });
 
-  return data;
+  return data.results;
 }
 
 serviceMovie()
-  .then(data => {
-    container.insertAdjacentHTML('beforeend', createMarkup(data.results));
+  .then(movies => {
+    const moviesMarkup = createMarkup(movies);
+    container.insertAdjacentHTML('beforeend', moviesMarkup);
+
+    const duplicateMarkup = createMarkup(movies);
+    container.insertAdjacentHTML('beforeend', duplicateMarkup);
+
+    const movieCardWidth = container.firstElementChild.offsetWidth;
+    const totalMovies = movies.length * 2;
+    const containerWidth = (movieCardWidth + 16) * totalMovies;
+
+    container.style.width = `${containerWidth}px`;
+
+    container.style.animationDuration = `${totalMovies * 2}s`;
   })
   .catch(error => console.log(error.message));
 

@@ -1,18 +1,6 @@
-.section {
-}
-
-.genres-section {
-}
-
-.container {
-}
-
 .genres-container {
   display: flex;
   padding: 0;
-}
-
-.genres-img {
 }
 
 .genres-info {
