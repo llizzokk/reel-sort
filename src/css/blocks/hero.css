@@ -7,7 +7,8 @@
 }
 
 .hero-title,
-.hero-text {
+.hero-text,
+.hero-button {
   opacity: 0;
   transform: translateX(20px);
 }
@@ -32,9 +33,29 @@
   font-size: 22px;
   line-height: 100%;
   letter-spacing: 0.05em;
+  margin-bottom: 20px;
 
   animation: fadeIn 1s ease-out forwards;
   animation-delay: 0.5s;
+}
+.hero-button {
+  display: inline-block;
+  background-color: #37302c;
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  color: #dfe0e2;
+  text-align: center;
+  border-radius: 4px;
+  width: 220px;
+  padding: 10px 16px;
+  transition: all 250ms ease-in-out;
+
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.7s;
+}
+.hero-button:hover {
+  background-color: #dfe0e2;
+  color: #37302c;
 }
 
 .hero-img {

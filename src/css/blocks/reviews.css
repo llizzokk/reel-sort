@@ -38,7 +38,7 @@
   overflow-y: scroll;
   height: 224px;
   padding: 32px;
-  border-radius: 16px;
+  border-radius: 4px;
   background-color: #37302c;
   color: #dfe0e2;
   flex-shrink: 0;

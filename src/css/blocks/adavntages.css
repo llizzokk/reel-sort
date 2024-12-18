@@ -26,7 +26,7 @@
   border: none;
   cursor: pointer;
   outline: none;
-  border-radius: 16px;
+  border-radius: 4px;
   background-color: #a45827;
 }
 
@@ -41,6 +41,10 @@
   justify-content: space-between !important;
   padding: 8px 24px !important;
   transition: all 250ms ease-in-out;
+}
+
+.accordion-item:hover .ac-state {
+  color: #37302c;
 }
 
 .accordion-item.is-active .ac-state {
@@ -67,10 +71,15 @@
   transform-origin: center;
   flex-shrink: 0;
   display: inline-block;
-  border-radius: 8px;
+  border-radius: 4px;
+
   padding: 8px;
   vertical-align: top;
   transition: transform 250ms ease-in-out, fill 150ms ease-in-out;
+}
+
+.accordion-item:hover .icon-drop-down {
+  fill: #37302c;
 }
 
 .accordion-item.is-active .icon-drop-down {

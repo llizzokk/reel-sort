@@ -73,7 +73,7 @@
   border-radius: 4px;
   width: 180px;
   padding: 10px 16px;
-  transition: all 350ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 .top-movie-btn:hover {

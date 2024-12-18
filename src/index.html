@@ -28,6 +28,7 @@
         <h1 class="hero-title">Your guide to the world of cinema.</h1>
         <p class="hero-text">Thousands of movies are waiting to tell you their stories. Choose a genre, add a touch of
           mood — and enjoy!</p>
+        <a class="hero-button" href="#feedback">Leave a review</a>
         <img srcset="./img/hero/hero.jpg 1x, ./img/hero/hero@2x.jpg 2x" src="./img/hero/hero.jpg" alt="film"
           class="hero-img" width="579" height="555" />
       </div>
@@ -259,6 +260,24 @@
           </button>
 
         </div>
+    </section>
+    <section class="section feedback-section" id="feedback">
+      <div class="container feedback-container">
+        <div class="feedback-form-wrap">
+          <h2 class="feedback-title">Leave a review</h2>
+          <form class="feebdack-form" id="feedbackForm">
+            <input type="text" name="username" class="feedback-input" placeholder="Full Name" required
+              autocomplete="name" />
+            <input type="email" name="email" class="feedback-input" placeholder="Email" required autocomplete="email" />
+            <textarea name="feedback" id="feedback" class="feedback-input feedback-textarea" placeholder="Your feedback"
+              required maxlength="300"></textarea>
+            <button type="submit" class="feedback-button" id="submitButton">Send</button>
+          </form>
+        </div>
+
+        <img srcset="./img/feedback/feedback.jpg 1x, ./img/feedback/feedback@2x.jpg 2x"
+          src="./img/feedback/feedback.jpg" alt="film" class="feedback-img" height="555" />
+      </div>
     </section>
   </main>
 
