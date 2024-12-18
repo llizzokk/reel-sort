@@ -1,0 +1,111 @@
+.reviews-section {
+  padding: 50px 0;
+}
+
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews-title {
+  font-family: 'Oswald', sans-serif;
+  color: #dfe0e2;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.swiper {
+  overflow: hidden;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.reviews-list {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+}
+
+.reviews-item.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow-y: scroll;
+  height: 224px;
+  padding: 32px;
+  border-radius: 16px;
+  background-color: #37302c;
+  color: #dfe0e2;
+  flex-shrink: 0;
+  margin: 0 !important;
+}
+
+.reviews-item::-webkit-scrollbar {
+  display: none;
+}
+
+.review-text,
+.review-user-name {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+}
+
+.review-user-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.swiper-button {
+  position: relative;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: background-color 250ms ease-in-out;
+}
+
+.swiper-button:hover,
+.swiper-button:active {
+  background-color: #37302c;
+}
+
+.slider-icon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  fill: transparent;
+  stroke: #a45827;
+}
+
+.swiper-button.disabled {
+  opacity: 0.2;
+  border-radius: 8px;
+  padding: 12px;
+  width: 40px;
+  height: 40px;
+  transition: all background-color 250ms ease-in-out;
+  cursor: default;
+  pointer-events: none;
+}
+
+.swiper-button.disabled .slider-icon {
+  opacity: 0.6;
+}

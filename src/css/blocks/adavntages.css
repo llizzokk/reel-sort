@@ -6,7 +6,7 @@
 .advantages-container {
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .advantages-title {
@@ -81,7 +81,7 @@
 .accordion-answer {
   padding: 24px 28px;
   min-width: 272px;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.03em;

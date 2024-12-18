@@ -28,7 +28,8 @@
         <h1 class="hero-title">Your guide to the world of cinema.</h1>
         <p class="hero-text">Thousands of movies are waiting to tell you their stories. Choose a genre, add a touch of
           mood — and enjoy!</p>
-        <img src="./img/hero.jpg" alt="film" width="579" height="555" class="hero-img">
+        <img srcset="./img/hero/hero.jpg 1x, ./img/hero/hero@2x.jpg 2x" src="./img/hero/hero.jpg" alt="film"
+          class="hero-img" width="579" height="555" />
       </div>
     </section>
     <section class="section top-movie-section">
@@ -43,7 +44,8 @@
     </section>
     <section class="section genres-section">
       <div class="container genres-container">
-        <img src="./img/reel.jpg" alt="Reel" class="genres-img">
+        <img srcset="./img/genres/reel.jpg 1x, ./img/genres/reel@2x.jpg 2x" src="./img/genres/reel.jpg" alt="film"
+          class="genres-img" width="579" height="555" />
         <div class="genres-info">
           <h2 class="genres-title">Beloved by Our Audience</h2>
           <ul class="genres-list">
@@ -162,6 +164,101 @@
           </li>
         </ul>
       </div>
+    </section>
+    <section class="section reviews-section">
+      <div class="container reviews-container">
+        <h2 class="reviews-title">Reviews</h2>
+        <div class="swiper">
+          <ul class="reviews-list swiper-wrapper">
+            <li class="reviews-item swiper-slide">
+              <p class="review-text">I absolutely love this movie search site! It's so easy to find movies by genre, and
+                the sorting options are fantastic. The design is sleek, and it works perfectly on my phone too!</p>
+              <div class="review-user-wrapper">
+                <img srcset="./img/reviews/sophia-turner.png 1x, ./img/reviews/sophia-turner@2x.png 2x"
+                  src="./img/reviews/sophia-turner.png" alt="User photo" class="review-user-photo" width="40"
+                  height="40" />
+                <p class="review-user-name">Sophia Turner</p>
+              </div>
+            </li>
+            <li class="reviews-item swiper-slide">
+              <p class="review-text">This site has quickly become my go-to for finding movies to watch. The genre
+                filters
+                and top movie lists are super helpful, and it saves me so much time!</p>
+              <div class="review-user-wrapper">
+                <img srcset="./img/reviews/michael-johnson.png 1x, ./img/reviews/michael-johnson@2x.png 2x"
+                  src="./img/reviews/michael-johnson.png" alt="User photo" class="review-user-photo" width="40"
+                  height="40" />
+                <p class="review-user-name">Michael Johnson</p>
+              </div>
+            </li>
+            <li class="reviews-item swiper-slide">
+              <p class="review-text">A brilliant tool for any movie lover! I enjoy how intuitive the interface is, and
+                the
+                sorting feature by genre is a game-changer. Highly recommended!</p>
+              <div class="review-user-wrapper">
+                <img srcset="./img/reviews/emily-davis.png 1x, ./img/reviews/emily-davis@2x.png 2x"
+                  src="./img/reviews/emily-davis.png" alt="User photo" class="review-user-photo" width="40"
+                  height="40" />
+                <p class="review-user-name">Emily Davis
+                </p>
+              </div>
+            </li>
+            <li class="reviews-item swiper-slide">
+              <p class="review-text">Finding my next favorite movie has never been easier. The site is fast, responsive,
+                and packed with great features. Five stars from me!</p>
+              <div class="review-user-wrapper">
+                <img srcset="./img/reviews/daniel-wilson.png 1x, ./img/reviews/daniel-wilson@2x.png 2x"
+                  src="./img/reviews/daniel-wilson.png" alt="User photo" class="review-user-photo" width="40"
+                  height="40" />
+                <p class="review-user-name">Daniel Wilson</p>
+              </div>
+            </li>
+            <li class="reviews-item swiper-slide">
+              <p class="review-text">As a film enthusiast, this site is perfect for me. It&apos;s simple to use, and I
+                always find exactly what I&apos;m looking for. Great job!</p>
+              <div class="review-user-wrapper">
+                <img srcset="./img/reviews/olivia-brown.png 1x, ./img/reviews/olivia-brown@2x.png 2x"
+                  src="./img/reviews/olivia-brown.png" alt="User photo" class="review-user-photo" width="40"
+                  height="40" />
+                <p class="review-user-name">Olivia Brown</p>
+              </div>
+            </li>
+            <li class="reviews-item swiper-slide">
+              <p class="review-text">I was amazed by how well-organized everything is on this site. Searching by genre
+                makes it so convenient. This is exactly what I needed!</p>
+              <div class="review-user-wrapper">
+                <img srcset="./img/reviews/james-taylor.png 1x, ./img/reviews/james-taylor@2x.png 2x"
+                  src="./img/reviews/james-taylor.png" alt="User photo" class="review-user-photo" width="40"
+                  height="40" />
+                <p class="review-user-name">James Taylor</p>
+              </div>
+            </li>
+            <li class="reviews-item swiper-slide">
+              <p class="review-text">The website is fantastic! I use it almost daily to find something interesting to
+                watch. The top movies section is my favorite part.</p>
+              <div class="review-user-wrapper">
+                <img srcset="./img/reviews/ava-martinez.png 1x, ./img/reviews/ava-martinez@2x.png 2x"
+                  src="./img/reviews/ava-martinez.png" alt="User photo" class="review-user-photo" width="40"
+                  height="40" />
+                <p class="review-user-name">Ava Martinez</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-buttons">
+          <button class="swiper-button swiper-button-prev" type="button" aria-label="Prev">
+            <svg class="slider-icon" width="24" height="24">
+              <use href="./img/icon.svg#icon-arrow-narrow-right" />
+            </svg>
+          </button>
+          <button class="swiper-button swiper-button-next" type="button" aria-label="Next">
+            <svg class="slider-icon" width="24" height="24">
+              <use href="./img/icon.svg#icon-arrow-narrow-left" />
+            </svg>
+          </button>
+
+        </div>
     </section>
   </main>
 
