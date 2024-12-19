@@ -6,6 +6,10 @@
   min-height: 555px;
 }
 
+.hero-img {
+  opacity: 80%;
+}
+
 .hero-title,
 .hero-text,
 .hero-button {
@@ -17,10 +21,11 @@
   z-index: 999;
   color: #dfe0e2;
   font-family: 'Oswald', sans-serif;
-  font-size: 62px;
+  font-size: 54px;
   line-height: 100%;
   letter-spacing: 0.05em;
-  margin-bottom: 40px;
+  padding-top: 30px;
+  margin-bottom: 170px;
 
   animation: fadeIn 1s ease-out forwards;
   animation-delay: 0.2s;
@@ -30,7 +35,7 @@
   z-index: 999;
   width: 320px;
   color: #dfe0e2;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 100%;
   letter-spacing: 0.05em;
   margin-bottom: 20px;
@@ -39,15 +44,16 @@
   animation-delay: 0.5s;
 }
 .hero-button {
+  z-index: 999;
   display: inline-block;
   background-color: #37302c;
-  font-size: 22px;
+  font-size: 18px;
   letter-spacing: 0.05em;
   color: #dfe0e2;
   text-align: center;
   border-radius: 4px;
-  width: 220px;
-  padding: 10px 16px;
+  width: 180px;
+  padding: 8px 14px;
   transition: all 250ms ease-in-out;
 
   animation: fadeIn 1s ease-out forwards;
@@ -72,5 +78,36 @@
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-title {
+    font-size: 58px;
+    margin-bottom: 40px;
+    padding-top: 0;
+  }
+
+  .hero-text {
+    font-size: 22px;
+  }
+  .hero-button {
+    font-size: 20px;
+    width: 220px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .hero-img {
+    opacity: 100%;
+  }
+
+  .hero-title {
+    font-size: 62px;
+  }
+
+  .hero-button {
+    font-size: 22px;
+    padding: 10px 16px;
   }
 }

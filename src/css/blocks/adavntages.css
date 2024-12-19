@@ -5,21 +5,24 @@
 
 .advantages-container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 .advantages-title {
   font-family: 'Oswald', sans-serif;
   color: #dfe0e2;
-  font-size: 50px;
+  text-align: center;
+  font-size: 42px;
   line-height: 100%;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 .ac-list {
-  width: 600px;
+  width: 300px;
 }
 
 .accordion-item {
@@ -95,4 +98,31 @@
   line-height: 150%;
   letter-spacing: 0.03em;
   color: #37302c;
+}
+
+@media screen and (min-width: 768px) {
+  .advantages-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .advantages-title {
+    font-size: 48px;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .ac-list {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .advantages-title {
+    font-size: 50px;
+  }
+
+  .ac-list {
+    width: 600px;
+  }
 }

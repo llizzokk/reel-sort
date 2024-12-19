@@ -14,7 +14,7 @@
 .top-movie-title {
   font-family: 'Oswald', sans-serif;
   color: #dfe0e2;
-  font-size: 50px;
+  font-size: 42px;
   line-height: 100%;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -67,16 +67,37 @@
 .top-movie-btn {
   display: inline-block;
   background-color: #a45827;
-  font-size: 22px;
+  font-size: 18px;
   letter-spacing: 0.05em;
   color: #dfe0e2;
   border-radius: 4px;
   width: 180px;
-  padding: 10px 16px;
+  padding: 8px 14px;
   transition: all 250ms ease-in-out;
 }
 
 .top-movie-btn:hover {
   background-color: #dfe0e2;
   color: #a45827;
+}
+
+@media screen and (min-width: 768px) {
+  .top-movie-title {
+    font-size: 48px;
+  }
+
+  .top-movie-btn {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .top-movie-title {
+    font-size: 50px;
+  }
+
+  .top-movie-btn {
+    font-size: 22px;
+    padding: 10px 16px;
+  }
 }
