@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" type="image/svg+xml" href="/reel-sort/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page 2</title>
+  <title>Genres</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -16,7 +16,12 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" crossorigin href="/reel-sort/assets/styles-CeRPVCK5.css">
+  <script type="module" crossorigin src="/reel-sort/page-2.js"></script>
+  <link rel="modulepreload" crossorigin href="/reel-sort/assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="/reel-sort/assets/vendor-DTDbZ_Ro.js">
+  <link rel="stylesheet" crossorigin href="/reel-sort/assets/vendor-DLkfUfUw.css">
+  <link rel="stylesheet" crossorigin href="/reel-sort/assets/page-2-DizhaS-y.css">
+  <link rel="stylesheet" crossorigin href="/reel-sort/assets/styles-2RFXk0a8.css">
 </head>
 
 <body>
@@ -31,7 +36,9 @@
           <a class="nav-link active" href="./page-2.html">Genres</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Top</a>
+          <a class="nav-link {=$highlight-curr}" href="./page-3.html">
+            Search
+          </a>
         </li>
       </ul>
     </nav>
@@ -39,13 +46,17 @@
 </header>
 
   <main>
-    <div class="container">
-      <h1 class="main-title">
-        <span class="main-title-gradient">Welcome</span> to page 2
-      </h1>
+    <section class="section genres-page-section">
+      <div class="container genres-page-container">
+        <div class="genresContainer">
+        </div>
+
+        <ul class="moviesContainer"></ul>
+      </div>
+      <button type="button" id="load-btn" class="load-more-hidden">Load more</button>
       <a class="back-link" href="./index.html">Go back</a>
 
-    </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -63,6 +74,7 @@
     <p class="footer-copy">&copy; Copyright 2024. Made by Llizzokk</p>
   </div>
 </footer>
+
 </body>
 
 </html>
