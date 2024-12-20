@@ -1,32 +1,35 @@
 .feedback-section {
+  padding: 50px 0 0 0;
   background-color: #37302c;
 }
 
 .feedback-container {
   display: flex;
-  justify-content: space-between;
-  padding: 0 0 0 32px;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
 }
 
 .feedback-form-wrap {
-  padding: 50px;
+  margin-bottom: 20px;
 }
 
 .feedback-title {
   font-family: 'Oswald', sans-serif;
   color: #dfe0e2;
-  font-size: 50px;
+  font-size: 42px;
   line-height: 100%;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .feebdack-form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 18px;
+  align-items: center;
+  gap: 16px;
 }
 
 .feedback-input {
@@ -35,8 +38,8 @@
   border-radius: 4px;
 
   outline: none;
-  padding: 18px;
-  width: 472px;
+  padding: 16px;
+  width: 320px;
   font-family: inherit;
   font-weight: 400;
   font-size: 16px;
@@ -60,12 +63,12 @@
 }
 
 .feedback-button {
-  font-size: 22px;
+  font-size: 18px;
   letter-spacing: 0.05em;
   color: #dfe0e2;
   border-radius: 4px;
   width: 180px;
-  padding: 10px 16px;
+  padding: 8px 14px;
   border: #a45827;
   background-color: #a45827;
   font-family: inherit;
@@ -85,4 +88,70 @@
 .feedback-button:hover {
   background-color: #a45827;
   color: #dfe0e2;
+}
+
+@media screen and (min-width: 768px) {
+  .feedback-section {
+    padding: 50px 0;
+  }
+
+  .feedback-container {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 32px;
+  }
+
+  .feedback-form-wrap {
+    margin-bottom: 0;
+  }
+
+  .feedback-title {
+    font-size: 48px;
+  }
+
+  .feebdack-form {
+    gap: 18px;
+  }
+
+  .feedback-input {
+    padding: 18px;
+    width: 472px;
+  }
+
+  .feedback-button {
+    font-size: 20px;
+  }
+
+  .feedback-img {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .feedback-section {
+    padding: 0;
+  }
+
+  .feedback-container {
+    justify-content: space-between;
+    padding: 0 0 0 32px;
+  }
+
+  .feedback-title {
+    font-size: 50px;
+    text-align: left;
+  }
+
+  .feebdack-form {
+    align-items: flex-start;
+  }
+
+  .feedback-button {
+    font-size: 22px;
+    padding: 10px 16px;
+  }
+
+  .feedback-img {
+    display: inline-block;
+  }
 }

@@ -6,12 +6,13 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 28px;
 }
 
 .footer-logo {
-  font-size: 28px;
+  font-size: 24px;
 }
+
 .footer-logo-span {
   color: #37302c;
 }
@@ -19,10 +20,10 @@
 .footer-contacts {
   display: flex;
   flex-direction: column;
-  align-items: self-end;
+  align-items: flex-end;
   gap: 4px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 150%;
   letter-spacing: 0.03em;
   font-style: normal;
@@ -39,10 +40,42 @@
 
 .footer-copy {
   font-weight: 300;
-  font-size: 14px;
+  font-size: 10px;
   line-height: 150%;
   letter-spacing: 0.03em;
   font-style: normal;
   color: #dfe0e2;
   text-align: right;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-info {
+    margin-bottom: 15px;
+  }
+
+  .footer-logo {
+    font-size: 26px;
+  }
+
+  .footer-contacts {
+    font-size: 14px;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .footer-logo {
+    font-size: 28px;
+  }
+
+  .footer-contacts {
+    font-size: 16px;
+  }
+
+  .footer-copy {
+    font-size: 14px;
+  }
 }
