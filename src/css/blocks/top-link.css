@@ -1,0 +1,25 @@
+.top-link {
+  opacity: 100%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #dfe0e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  padding: 8px;
+  transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
+}
+
+.top-link-icon {
+  fill: #a45827;
+}
+
+.top-link:hover {
+  transform: scale(1.1);
+}
+
+.top-link-hidden {
+  opacity: 0;
+}
