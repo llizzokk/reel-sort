@@ -37,6 +37,11 @@
   color: #a45827;
 }
 
+.genres-activated {
+  background-color: #dfe0e2;
+  color: #a45827;
+}
+
 .moviesContainer {
   display: flex;
   flex-wrap: wrap;

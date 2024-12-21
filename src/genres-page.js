@@ -19,8 +19,23 @@ async function init() {
 
     genresContainer.addEventListener('click', async event => {
       if (event.target.classList.contains('genres-list-button')) {
+        const allGenresButtons = document.querySelectorAll(
+          '.genres-list-button'
+        );
+        allGenresButtons.forEach(button =>
+          button.classList.remove('genres-activated')
+        );
+
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+
+        event.target.classList.add('genres-activated');
+
         genreId = event.target.dataset.genreId;
         currentPage = 1;
+
         button.classList.replace('load-more-hidden', 'btn');
 
         moviesContainer.innerHTML = '';
@@ -46,14 +61,23 @@ init();
 button.addEventListener('click', handleLoad);
 
 async function handleLoad() {
-  if (!genreId) return; // Если не выбран жанр, не загружаем фильмы
+  if (!genreId) return;
 
   button.classList.replace('btn', 'load-more-hidden');
   currentPage += 1;
 
   try {
     const movies = await fetchMoviesByGenre(genreId, currentPage, PER_PAGE);
-    renderMovies(movies, moviesContainer); // Добавляем новые фильмы в конец списка
+    renderMovies(movies, moviesContainer);
+
+    const movieItem = document.querySelector('.movies-list-item');
+    const itemHeight = movieItem.getBoundingClientRect().height;
+
+    window.scrollBy({
+      left: 0,
+      top: itemHeight,
+      behavior: 'smooth',
+    });
     button.classList.replace('load-more-hidden', 'btn');
   } catch (error) {
     console.log('Ошибка при загрузке следующих фильмов:', error);
