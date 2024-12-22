@@ -1,5 +1,6 @@
 .genres-page-section {
   padding: 50px 0;
+  min-height: 100vh;
 }
 
 .genres-page-container {
@@ -9,17 +10,43 @@
   gap: 20px;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #37302c;
+}
+
+.dropdown-button {
+  background-color: #37302c;
+  font-family: inherit;
+  font-size: 16px;
+  border: none;
+  letter-spacing: 0.05em;
+  color: #dfe0e2;
+  border-radius: 4px;
+  width: 150px;
+  height: 55px;
+  padding: 8px 14px;
+  transition: all 250ms ease-in-out;
+}
+
 .genresContainer {
-  display: flex;
-  flex-direction: row;
+  display: none;
+  position: absolute;
+  top: 50px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 12px;
+  padding: 16px;
+  border-radius: 4px;
+  background-color: #37302c;
+  z-index: 999;
 }
 
 .genres-list-button {
-  background-color: #37302c;
+  background-color: #a45827;
   font-family: inherit;
   font-size: 16px;
   border: none;
@@ -52,7 +79,7 @@
 
 .movies-list-item {
   width: calc((100% - 12px) / 2);
-  height: 310px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,25 +141,12 @@
 }
 
 @media screen and (min-width: 768px) {
-  .genres-page-container {
-    flex-direction: row;
-  }
-
-  .genresContainer {
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
   .genres-list-button {
     width: 160px;
   }
 
-  .moviesContainer {
-    justify-content: flex-end;
-  }
-
   .movies-list-item {
-    width: calc((100% - 24px) / 3);
+    width: calc((100% - 36px) / 4);
     height: 330px;
   }
 }
@@ -144,6 +158,6 @@
 
   .movies-list-item {
     width: calc((100% - 48px) / 5);
-    height: 360px;
+    height: 415px;
   }
 }
