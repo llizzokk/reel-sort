@@ -13,6 +13,13 @@ dropdown.addEventListener('mouseleave', function () {
   dropdownContent.style.display = 'none';
 });
 
+document.addEventListener('click', function (event) {
+  const isClickInside = dropdown.contains(event.target);
+  if (!isClickInside) {
+    dropdownContent.style.display = 'none';
+  }
+});
+
 dropdownContent.addEventListener('click', function (event) {
   if (event.target && event.target.classList.contains('genres-list-button')) {
     dropdownButton.textContent = event.target.textContent;
