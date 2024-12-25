@@ -37,6 +37,19 @@
     <section class="section top-movie-section">
       <div class="container top-movie-container">
         <h2 class="top-movie-title">Top Movies of the Week</h2>
+        <div class="loader-container">
+          <div class="loader-inner ball-grid-pulse">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
         <div id="top-movie-app">
           <ul class="top-movie-list"></ul>
         </div>
@@ -51,11 +64,26 @@
         <div class="genres-info">
           <h2 class="genres-title">Beloved by Our Audience</h2>
           <ul class="genres-list">
-            <li class="genres-item"><a href="./page-2.html" target="_blank">Drama</a></li>
-            <li class="genres-item"><a href="./page-2.html" target="_blank">Comedy</a></li>
-            <li class="genres-item"><a href="./page-2.html" target="_blank">Action</a></li>
-            <li class="genres-item"><a href="./page-2.html" target="_blank">Adventure</a></li>
-            <li class="genres-item"><a href="./page-2.html" target="_blank">Horror</a></li>
+            <li class="genres-item"><a href="./page-2.html?genre=18&genreName=Drama" target="_blank">
+                <svg class="genres-more-icon" width="24" height="24">
+                  <use href="./img/icon.svg#icon-arrow-narrow-left" />
+                </svg>Drama</a></li>
+            <li class="genres-item"><a href="./page-2.html?genre=35&genreName=Comedy" target="_blank"><svg
+                  class="genres-more-icon" width="24" height="24">
+                  <use href="./img/icon.svg#icon-arrow-narrow-left" />
+                </svg>Comedy</a></li>
+            <li class="genres-item"><a href="./page-2.html?genre=28&genreName=Action" target="_blank"><svg
+                  class="genres-more-icon" width="24" height="24">
+                  <use href="./img/icon.svg#icon-arrow-narrow-left" />
+                </svg>Action</a></li>
+            <li class="genres-item"><a href="./page-2.html?genre=12&genreName=Adventure" target="_blank"><svg
+                  class="genres-more-icon" width="24" height="24">
+                  <use href="./img/icon.svg#icon-arrow-narrow-left" />
+                </svg>Adventure</a></li>
+            <li class="genres-item"><a href="./page-2.html?genre=27&genreName=Horror" target="_blank"><svg
+                  class="genres-more-icon" width="24" height="24">
+                  <use href="./img/icon.svg#icon-arrow-narrow-left" />
+                </svg>Horror</a></li>
           </ul>
         </div>
       </div>

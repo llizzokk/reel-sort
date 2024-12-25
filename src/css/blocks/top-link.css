@@ -9,6 +9,7 @@
   justify-content: center;
   border-radius: 100%;
   padding: 8px;
+  z-index: 1000;
   transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
 }
 

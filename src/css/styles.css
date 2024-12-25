@@ -3,10 +3,12 @@
 @import url('./base.css');
 @import url('./container.css');
 @import url('./genres-page.css');
+@import url('./blocks/top-link.css');
+@import url('./blocks/back-link.css');
+@import url('./blocks/loader.css');
 
 /* Sections style */
 @import url('./blocks/header.css');
-@import url('./blocks/back-link.css');
 @import url('./blocks/hero.css');
 @import url('./blocks/top-movie.css');
 @import url('./blocks/genres.css');
@@ -14,4 +16,3 @@
 @import url('./blocks/reviews.css');
 @import url('./blocks/feedback.css');
 @import url('./blocks/footer.css');
-@import url('./blocks/top-link.css');

@@ -3,17 +3,45 @@
 import './css/genres-page.css';
 import { fetchGenres, fetchMoviesByGenre } from './js/pixabay-api.js';
 import { renderGenres, renderMovies } from './js/render-function.js';
+import 'loaders.css';
 
 const genresContainer = document.querySelector('.genresContainer');
 const moviesContainer = document.querySelector('.moviesContainer');
 const button = document.getElementById('load-btn');
+const loader = document.querySelector('.loader-container');
 
 let currentPage = 1;
 let genreId = null;
 let PER_PAGE = 15;
 
+const urlParams = new URLSearchParams(window.location.search);
+
+function getQueryParam(param) {
+  return urlParams.get(param);
+}
+
+function getQueryParamName(paramName) {
+  return urlParams.get(paramName);
+}
+
+genreId = getQueryParam('genre');
+const genreSelectName = getQueryParamName('genreName');
+
 async function init() {
   try {
+    if (genreId) {
+      loader.style.display = 'flex';
+      const moviesSelect = await fetchMoviesByGenre(
+        genreId,
+        currentPage,
+        PER_PAGE
+      );
+      renderMovies(moviesSelect, moviesContainer);
+      const buttonSelect = document.querySelector('.dropdown-button');
+      buttonSelect.textContent = genreSelectName;
+      button.classList.replace('load-more-hidden', 'btn');
+    }
+
     const genres = await fetchGenres();
     renderGenres(genres, genresContainer);
 
@@ -40,6 +68,8 @@ async function init() {
 
         moviesContainer.innerHTML = '';
         try {
+          loader.style.display = 'flex';
+
           const movies = await fetchMoviesByGenre(
             genreId,
             currentPage,
@@ -48,11 +78,15 @@ async function init() {
           renderMovies(movies, moviesContainer);
         } catch (error) {
           console.error('Ошибка при загрузке фильмов:', error);
+        } finally {
+          loader.style.display = 'none';
         }
       }
     });
   } catch (error) {
     console.error('Ошибка инициализации приложения:', error);
+  } finally {
+    loader.style.display = 'none';
   }
 }
 
@@ -67,6 +101,8 @@ async function handleLoad() {
   currentPage += 1;
 
   try {
+    loader.style.display = 'flex';
+
     const movies = await fetchMoviesByGenre(genreId, currentPage, PER_PAGE);
     renderMovies(movies, moviesContainer);
 
@@ -83,5 +119,6 @@ async function handleLoad() {
     console.log('Ошибка при загрузке следующих фильмов:', error);
   } finally {
     button.disabled = false;
+    // loader.style.display = 'none';
   }
 }

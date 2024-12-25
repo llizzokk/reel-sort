@@ -8,6 +8,7 @@
   width: 140px;
   padding: 8px 14px;
   transition: all 250ms ease-in-out;
+  margin-top: auto;
 }
 
 .back-link:hover {

@@ -29,23 +29,49 @@
 }
 
 .genres-item {
-  text-align: center;
+  position: relative;
   background-color: #37302c;
-  font-size: 18px;
-  letter-spacing: 0.05em;
-  color: #dfe0e2;
   border-radius: 4px;
-  width: 180px;
+  width: 190px;
   padding: 8px 14px;
   opacity: 0;
   transform: translateX(-20px);
   transition: opacity 0.5s ease, transform 0.5s ease,
-    background-color 350ms ease-in-out, color 350ms ease-in-out;
+    background-color 350ms ease-in-out, color 350ms ease-in-out,
+    width 0.3s ease-in-out;
 }
 
 .genres-item:hover {
   background-color: #dfe0e2;
   color: #37302c;
+  width: 150%;
+}
+
+.genres-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #dfe0e2;
+}
+
+.genres-item:hover a {
+  color: #37302c;
+}
+
+.genres-more-icon {
+  display: none;
+  transition: display 0.3s ease;
+  fill: transparent;
+  stroke: #37302c;
+  margin-right: 5px;
+  transition: display 250ms ease-in-out;
+}
+
+.genres-item:hover .genres-more-icon {
+  display: inline;
 }
 
 @media screen and (min-width: 768px) {
@@ -61,7 +87,7 @@
     font-size: 48px;
   }
 
-  .genres-item {
+  .genres-item a {
     font-size: 20px;
   }
 }
@@ -80,7 +106,10 @@
   }
 
   .genres-item {
-    font-size: 22px;
     padding: 10px 16px;
+  }
+
+  .genres-item a {
+    font-size: 22px;
   }
 }

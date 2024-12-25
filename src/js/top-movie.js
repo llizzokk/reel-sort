@@ -2,12 +2,14 @@
 
 import '../css/styles.css';
 import axios from 'axios';
+import 'loaders.css';
 
 const BASE_URL = 'https://api.themoviedb.org/3';
 const END_POINT = '/trending/movie/week';
 const API_KEY = '5cd3b967f25ca5ea88c6b3955d7951c5';
 
 const container = document.querySelector('.top-movie-list');
+const loader = document.querySelector('.loader-container');
 
 async function serviceMovie() {
   const { data } = await axios(`${BASE_URL}${END_POINT}`, {
@@ -21,6 +23,7 @@ async function serviceMovie() {
 
 serviceMovie()
   .then(movies => {
+    loader.style.display = 'block';
     const moviesMarkup = createMarkup(movies);
     container.insertAdjacentHTML('beforeend', moviesMarkup);
 
@@ -35,7 +38,10 @@ serviceMovie()
 
     container.style.animationDuration = `${totalMovies * 2}s`;
   })
-  .catch(error => console.log(error.message));
+  .catch(error => console.log(error.message))
+  .finally(() => {
+    loader.style.display = 'none';
+  });
 
 function createMarkup(arr) {
   return arr
