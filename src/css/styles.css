@@ -3,9 +3,11 @@
 @import url('./base.css');
 @import url('./container.css');
 @import url('./genres-page.css');
+@import url('./top-page.css');
 @import url('./blocks/top-link.css');
 @import url('./blocks/back-link.css');
 @import url('./blocks/loader.css');
+@import url('./blocks/error.css');
 
 /* Sections style */
 @import url('./blocks/header.css');

@@ -10,6 +10,7 @@ const API_KEY = '5cd3b967f25ca5ea88c6b3955d7951c5';
 
 const container = document.querySelector('.top-movie-list');
 const loader = document.querySelector('.loader-container');
+const errorMessage = document.querySelector('.error');
 
 async function serviceMovie() {
   const { data } = await axios(`${BASE_URL}${END_POINT}`, {
@@ -38,7 +39,10 @@ serviceMovie()
 
     container.style.animationDuration = `${totalMovies * 2}s`;
   })
-  .catch(error => console.log(error.message))
+  .catch(error => {
+    console.log(error.message);
+    errorMessage.classList.replace('error-hidden', 'error-message');
+  })
   .finally(() => {
     loader.style.display = 'none';
   });

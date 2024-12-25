@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     },
     {
-      threshold: 0.7,
+      threshold: 0.3,
     }
   );
 
-  observer.observe(document.querySelector('.genres-list'));
+  observer.observe(document.querySelector('.genres-section'));
 });

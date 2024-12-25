@@ -1,0 +1,9 @@
+.error-message {
+  display: block;
+  font-size: 24px;
+  color: #dfe0e2;
+}
+
+.error-hidden {
+  display: none;
+}

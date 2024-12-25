@@ -31,7 +31,7 @@
   margin-bottom: 170px;
 
   animation: fadeIn 1s ease-out forwards;
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
 }
 
 .hero-text {
@@ -44,7 +44,7 @@
   margin-bottom: 20px;
 
   animation: fadeIn 1s ease-out forwards;
-  animation-delay: 0.5s;
+  animation-delay: 0.3s;
 }
 .hero-button {
   z-index: 999;
@@ -60,7 +60,7 @@
   transition: all 250ms ease-in-out;
 
   animation: fadeIn 1s ease-out forwards;
-  animation-delay: 0.7s;
+  animation-delay: 0.6s;
 }
 .hero-button:hover {
   background-color: #dfe0e2;

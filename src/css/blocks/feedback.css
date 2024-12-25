@@ -85,11 +85,6 @@
   opacity: 50%;
 }
 
-.feedback-button:hover {
-  background-color: #a45827;
-  color: #dfe0e2;
-}
-
 @media screen and (min-width: 768px) {
   .feedback-section {
     padding: 50px 0;

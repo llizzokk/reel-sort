@@ -119,6 +119,5 @@ async function handleLoad() {
     console.log('Ошибка при загрузке следующих фильмов:', error);
   } finally {
     button.disabled = false;
-    // loader.style.display = 'none';
   }
 }
