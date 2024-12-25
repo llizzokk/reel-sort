@@ -16,8 +16,12 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@800&display=swap"
     rel="stylesheet">
-  <script type="module" crossorigin src="/reel-sort/assets/top-link-CEU5a_OJ.js"></script>
-  <link rel="stylesheet" crossorigin href="/reel-sort/assets/top-link-E4IKgeS9.css">
+  <script type="module" crossorigin src="/reel-sort/page-3.js"></script>
+  <link rel="modulepreload" crossorigin href="/reel-sort/assets/top-link-Cs-_7EIG.js">
+  <link rel="modulepreload" crossorigin href="/reel-sort/assets/vendor-C0Nsn3Ff.js">
+  <link rel="stylesheet" crossorigin href="/reel-sort/assets/top-link-a8mWTHJv.css">
+  <link rel="stylesheet" crossorigin href="/reel-sort/assets/vendor-CA5tPZEM.css">
+  <link rel="stylesheet" crossorigin href="/reel-sort/assets/page-3-Cfjkex3h.css">
 </head>
 
 <body>
@@ -33,7 +37,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="./page-3.html">
-            Search
+            Top
           </a>
         </li>
       </ul>
@@ -42,12 +46,31 @@
 </header>
 
   <main>
-    <div class="container">
-      <h1 class="main-title">
-        <span class="main-title-gradient">Welcome</span> to page 3
-      </h1>
+    <section class="section top-page-section">
+      <div class="container top-page-container">
+        <form class="top-form">
+          <input type="text" name="search" class="top-input">
+          <button type="submit" class="top-button">Search</button>
+        </form>
+        <div class="loader-container">
+          <div class="loader-inner ball-grid-pulse">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+        <ul class="moviesContainer"></ul>
+      </div>
+      <button type="button" id="load-btn" class="load-more-hidden">Load more</button>
       <a class="back-link" href="./index.html" aria-label="Go back">Go back</a>
-    </div>
+    </section>
   </main>
 
   <footer class="footer">
