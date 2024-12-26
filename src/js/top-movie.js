@@ -51,7 +51,7 @@ function createMarkup(arr) {
   return arr
     .map(
       ({ poster_path, original_title, overview }) => `<li class="movie-card">
-            <img src="https://image.tmdb.org/t/p/w300${poster_path}" alt="${original_title}" class="movie-card-img" width="234" height="375">
+            <img src="https://image.tmdb.org/t/p/w300${poster_path}" alt="${original_title}" class="movie-card-img" width="252" height="375">
             <div class="movie-card-overlay">
               <h3 class="movie-card-title">${original_title}</h3>
               <p class="movie-card-description">${overview}</p>

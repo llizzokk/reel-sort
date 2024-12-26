@@ -101,7 +101,7 @@
   padding: 12px;
   width: 40px;
   height: 40px;
-  transition: all background-color 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
   cursor: default;
   pointer-events: none;
 }
