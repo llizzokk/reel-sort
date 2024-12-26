@@ -30,6 +30,7 @@ async function serviceTopMovie(searchValue = '', page = 1) {
         page,
       },
     });
+    button.classList.replace('load-more-hidden', 'btn');
     return data.results;
   } catch (error) {
     console.log(error.message);
