@@ -21,7 +21,7 @@ export function renderMovies(movies, container) {
     const movieElement = document.createElement('li');
     movieElement.className = 'movies-list-item';
     movieElement.innerHTML = `
-      <img src="https://image.tmdb.org/t/p/w200${movie.poster_path}" alt="${movie.title}" class="movies-item-img">
+      <img src="https://image.tmdb.org/t/p/w200${movie.poster_path}" alt="${movie.title}" class="movies-item-img" width="234" height="351">
       <h3 class="movies-item-title">${movie.title}</h3>
     `;
     container.insertAdjacentElement('beforeend', movieElement);

@@ -84,7 +84,8 @@ async function init() {
       }
     });
   } catch (error) {
-    console.error('Ошибка инициализации приложения:', error);
+    console.log(error.message);
+    errorMessage.classList.replace('error-hidden', 'error-message');
   } finally {
     loader.style.display = 'none';
   }
@@ -101,7 +102,7 @@ async function handleLoad() {
   currentPage += 1;
 
   try {
-    loader.style.display = 'flex';
+    loader.style.display = 'block';
 
     const movies = await fetchMoviesByGenre(genreId, currentPage, PER_PAGE);
     renderMovies(movies, moviesContainer);
@@ -116,8 +117,10 @@ async function handleLoad() {
     });
     button.classList.replace('load-more-hidden', 'btn');
   } catch (error) {
-    console.log('Ошибка при загрузке следующих фильмов:', error);
+    console.log(error.message);
+    errorMessage.classList.replace('error-hidden', 'error-message');
   } finally {
     button.disabled = false;
+    loader.style.display = 'none';
   }
 }

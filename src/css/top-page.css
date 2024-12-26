@@ -27,6 +27,7 @@
   color: #dfe0e2;
   transition: border 250ms ease-in-out;
   margin-right: 15px;
+  margin-bottom: 20px;
 }
 
 .top-input:focus {
@@ -50,4 +51,10 @@
 .top-button:hover {
   background-color: #dfe0e2;
   color: #a45827;
+}
+
+@media screen and (min-width: 768px) {
+  .top-input {
+    margin-bottom: 0;
+  }
 }

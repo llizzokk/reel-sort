@@ -53,7 +53,7 @@
 
 .movie-card img {
   width: 100%;
-  height: auto;
+  height: 375px;
   transition: filters 100ms ease-in-out;
 }
 
