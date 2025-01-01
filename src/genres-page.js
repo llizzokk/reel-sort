@@ -9,6 +9,9 @@ const genresContainer = document.querySelector('.genresContainer');
 const moviesContainer = document.querySelector('.moviesContainer');
 const button = document.getElementById('load-btn');
 const loader = document.querySelector('.loader-container');
+const modal = document.querySelector('.modal');
+const modalCloseBtn = document.querySelector('.modal-close-btn');
+const modalInfo = document.querySelector('.modal-info');
 
 let currentPage = 1;
 let genreId = null;
@@ -94,6 +97,7 @@ async function init() {
 init();
 
 button.addEventListener('click', handleLoad);
+modalCloseBtn.addEventListener('click', closeModal);
 
 async function handleLoad() {
   if (!genreId) return;
@@ -124,3 +128,29 @@ async function handleLoad() {
     loader.style.display = 'none';
   }
 }
+
+export function handleMovieClick(movie) {
+  const { title, overview, poster_path, release_date, vote_average } = movie;
+
+  modalInfo.innerHTML = `
+    <img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="${title}" width="300" class="modal-img">
+    <div class="modal-wrap">
+    <h2 class="modal-title">${title}</h2>
+    <p class="modal-text">Release Date: <span class="modal-text-span">${release_date}</span></p>
+    <p class="modal-text">Rating: <span class="modal-text-span">${vote_average}</span></p>
+    <p class="modal-text">Overview: <span class="modal-text-span">${overview}</span></p>
+    </div>
+  `;
+
+  modal.classList.remove('hidden');
+}
+
+function closeModal() {
+  modal.classList.add('hidden');
+}
+
+modal.addEventListener('click', event => {
+  if (event.target === modal) {
+    closeModal();
+  }
+});

@@ -1,5 +1,7 @@
 'use strict';
 
+import { handleMovieClick } from '../genres-page';
+
 export function renderGenres(genres, container) {
   container.innerHTML = '';
   genres.forEach(genre => {
@@ -13,7 +15,7 @@ export function renderGenres(genres, container) {
 
 export function renderMovies(movies, container) {
   if (movies.length === 0) {
-    container.innerHTML = '<p>Фильмы не найдены.</p>';
+    container.innerHTML = '<p>No movies found.</p>';
     return;
   }
 
@@ -25,5 +27,10 @@ export function renderMovies(movies, container) {
       <h3 class="movies-item-title">${movie.title}</h3>
     `;
     container.insertAdjacentElement('beforeend', movieElement);
+
+    const movieItems = document.querySelectorAll('.movies-list-item');
+    movieItems.forEach((item, index) => {
+      item.addEventListener('click', () => handleMovieClick(movies[index]));
+    });
   });
 }

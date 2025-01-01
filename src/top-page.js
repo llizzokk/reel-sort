@@ -14,6 +14,9 @@ const button = document.getElementById('top-load-btn');
 const form = document.querySelector('.top-form');
 const loader = document.querySelector('.loader-container');
 const errorMessage = document.querySelector('.error');
+const modal = document.querySelector('.modal');
+const modalCloseBtn = document.querySelector('.modal-close-btn');
+const modalInfo = document.querySelector('.modal-info');
 
 let currentPage = 1;
 let currentSearch = '';
@@ -70,10 +73,16 @@ function renderMovies(movies) {
   errorMessage.classList.replace('error-message', 'error-hidden');
   const moviesMarkup = createTopMarkup(movies);
   container.insertAdjacentHTML('beforeend', moviesMarkup);
+
+  const movieItems = document.querySelectorAll('.movies-list-item');
+  movieItems.forEach((item, index) => {
+    item.addEventListener('click', () => handleMovieClick(movies[index]));
+  });
 }
 
 button.addEventListener('click', handleLoad);
 form.addEventListener('submit', handleSubmit);
+modalCloseBtn.addEventListener('click', closeModal);
 
 async function handleLoad() {
   button.classList.replace('btn', 'load-more-hidden');
@@ -131,3 +140,29 @@ async function handleSubmit(event) {
     event.target.elements.search.value = '';
   }
 }
+
+function handleMovieClick(movie) {
+  const { title, overview, poster_path, release_date, vote_average } = movie;
+
+  modalInfo.innerHTML = `
+    <img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="${title}" width="300" class="modal-img">
+    <div class="modal-wrap">
+    <h2 class="modal-title">${title}</h2>
+    <p class="modal-text">Release Date: <span class="modal-text-span">${release_date}</span></p>
+    <p class="modal-text">Rating: <span class="modal-text-span">${vote_average}</span></p>
+    <p class="modal-text">Overview: <span class="modal-text-span">${overview}</span></p>
+    </div>
+  `;
+
+  modal.classList.remove('hidden');
+}
+
+function closeModal() {
+  modal.classList.add('hidden');
+}
+
+modal.addEventListener('click', event => {
+  if (event.target === modal) {
+    closeModal();
+  }
+});
