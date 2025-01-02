@@ -17,31 +17,40 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@800&display=swap"
     rel="stylesheet">
   <script type="module" crossorigin src="/reel-sort/page-2.js"></script>
-  <link rel="modulepreload" crossorigin href="/reel-sort/assets/top-link-CI3MJDcL.js">
+  <link rel="modulepreload" crossorigin href="/reel-sort/assets/lang-toggle-A8p9mm5l.js">
   <link rel="modulepreload" crossorigin href="/reel-sort/assets/vendor-C0Nsn3Ff.js">
-  <link rel="stylesheet" crossorigin href="/reel-sort/assets/top-link-Dqi1SHJe.css">
+  <link rel="stylesheet" crossorigin href="/reel-sort/assets/lang-toggle-CGW2u40e.css">
   <link rel="stylesheet" crossorigin href="/reel-sort/assets/vendor-CA5tPZEM.css">
-  <link rel="stylesheet" crossorigin href="/reel-sort/assets/page-2-i2uHHBaW.css">
+  <link rel="stylesheet" crossorigin href="/reel-sort/assets/page-2-DQ7Uig2A.css">
 </head>
 
 <body>
   <header class="header" id="header">
   <div class="container header-container">
-    <nav class="nav">
+    <div class="nav">
       <a class="nav-logo" href="./index.html" aria-label="Site logo">
         Reel<span class="nav-logo-span">Sort</span>
       </a>
+
       <ul class="nav-list">
         <li class="nav-item">
-          <a class="nav-link active" href="./page-2.html">Genres</a>
+          <a class="lang nav-link active" href="./page-2.html" data-key="header-button1">Genres</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">
-            Top
+          <a class="lang nav-link {=$highlight-curr}" href="./page-3.html" data-key="header-button2">
+            Search
           </a>
         </li>
       </ul>
-    </nav>
+      <div class="button-3 button-changes-mod r">
+        <input class="checkbox units" name="checkbox-mod" type="checkbox" aria-label="checkbox-mod" />
+        <div class="knobs-changes-mod">
+        </div>
+        <div class="layer-changes-mod"></div>
+      </div>
+    </div>
+
+
   </div>
 </header>
 
@@ -49,7 +58,7 @@
     <section class="section genres-page-section">
       <div class="container genres-page-container">
         <div class="dropdown">
-          <button class="dropdown-button">Select genre</button>
+          <button class="lang dropdown-button" data-key="genres-page-button">Select genre</button>
           <div class="genresContainer">
           </div>
         </div>
@@ -71,8 +80,8 @@
         <ul class="moviesContainer"></ul>
         <p class="error-hidden error">Whoops, looks like something went wrong...</p>
       </div>
-      <button type="button" id="load-btn" class="load-more-hidden">Load more</button>
-      <a class="back-link" href="./index.html" aria-label="Go back">Go back</a>
+      <button type="button" id="load-btn" class="lang load-more-hidden" data-key="load-more">Load more</button>
+      <a class="lang back-link" href="./index.html" aria-label="Go back" data-key="back">Go back</a>
     </section>
     <div class="modal hidden">
       <div class="modal-content">
@@ -94,7 +103,7 @@
         Reel<span class="nav-logo-span footer-logo-span">Sort</span>
       </a>
       <address class="footer-contacts">
-        <p class="footer-contacts-text">Contact us:</p>
+        <p class="lang footer-contacts-text" data-key="footer">Contact us:</p>
         <a href="tel:+380888888888" class="footer-contacts-item">+380 (88) 888-88-88</a>
         <a href="mailto:lizaapostol378@gmail.com" class="footer-contacts-item">lizaapostol378@gmail.com</a>
       </address>
