@@ -109,7 +109,7 @@
   letter-spacing: 0.05em;
   color: #dfe0e2;
   border-radius: 4px;
-  width: 180px;
+  width: 210px;
   padding: 8px 14px;
   transition: all 250ms ease-in-out;
 }
@@ -126,6 +126,7 @@
 
   .top-movie-btn {
     font-size: 20px;
+    width: 260px;
   }
 }
 

@@ -12,6 +12,7 @@ export async function fetchGenres() {
     const response = await axios.get(GENRE_URL, {
       params: {
         api_key: API_KEY,
+        language: window.currentLanguage || 'en',
       },
     });
     return response.data.genres;
@@ -27,6 +28,7 @@ export async function fetchMoviesByGenre(genreId, page = 1, perPage = 15) {
       params: {
         api_key: API_KEY,
         with_genres: genreId,
+        language: window.currentLanguage || 'en',
         page,
       },
     });

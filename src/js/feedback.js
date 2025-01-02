@@ -8,11 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const submitButton = document.getElementById('submitButton');
   const inputs = document.querySelectorAll('.feedback-input');
 
-  if (!form || !submitButton) {
-    console.error('Форма или кнопка не найдены!');
-    return;
-  }
-
   const checkFormValidity = () => {
     const allFieldsFilled = Array.from(inputs).every(
       input => input.value.trim() !== ''
@@ -26,13 +21,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.addEventListener('submit', event => {
     event.preventDefault();
-
-    iziToast.success({
-      message: 'Feedback was successfully sent!',
-      messageColor: '#dfe0e2',
-      backgroundColor: '#37302c',
-      position: 'topRight',
-    });
+    if (window.currentLanguage === 'uk') {
+      iziToast.success({
+        message: 'Відгук успішно надіслано!',
+        messageColor: '#dfe0e2',
+        backgroundColor: '#37302c',
+        position: 'topRight',
+      });
+    } else {
+      iziToast.success({
+        message: 'Feedback was successfully sent!',
+        messageColor: '#dfe0e2',
+        backgroundColor: '#37302c',
+        position: 'topRight',
+      });
+    }
 
     form.reset();
 

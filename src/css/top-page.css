@@ -64,10 +64,16 @@
   justify-content: center;
   align-items: center;
   z-index: 1002;
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
 }
 
 .modal.hidden {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .modal-content {

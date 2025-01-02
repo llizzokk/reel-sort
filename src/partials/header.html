@@ -1,19 +1,28 @@
 <header class="header" id="header">
   <div class="container header-container">
-    <nav class="nav">
+    <div class="nav">
       <a class="nav-logo" href="./index.html" aria-label="Site logo">
         Reel<span class="nav-logo-span">Sort</span>
       </a>
+
       <ul class="nav-list">
         <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Genres</a>
+          <a class="lang nav-link {=$highlight-act}" href="./page-2.html" data-key="header-button1">Genres</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">
-            Top
+          <a class="lang nav-link {=$highlight-curr}" href="./page-3.html" data-key="header-button2">
+            Search
           </a>
         </li>
       </ul>
-    </nav>
+      <div class="button-3 button-changes-mod r">
+        <input class="checkbox units" name="checkbox-mod" type="checkbox" aria-label="checkbox-mod" />
+        <div class="knobs-changes-mod">
+        </div>
+        <div class="layer-changes-mod"></div>
+      </div>
+    </div>
+
+
   </div>
 </header>

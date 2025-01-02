@@ -28,9 +28,6 @@ export function renderMovies(movies, container) {
     `;
     container.insertAdjacentElement('beforeend', movieElement);
 
-    const movieItems = document.querySelectorAll('.movies-list-item');
-    movieItems.forEach((item, index) => {
-      item.addEventListener('click', () => handleMovieClick(movies[index]));
-    });
+    movieElement.addEventListener('click', () => handleMovieClick(movie));
   });
 }

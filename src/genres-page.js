@@ -16,6 +16,7 @@ const modalInfo = document.querySelector('.modal-info');
 let currentPage = 1;
 let genreId = null;
 let PER_PAGE = 15;
+let allMovies = [];
 
 const urlParams = new URLSearchParams(window.location.search);
 
@@ -109,6 +110,7 @@ async function handleLoad() {
     loader.style.display = 'block';
 
     const movies = await fetchMoviesByGenre(genreId, currentPage, PER_PAGE);
+    allMovies = [...allMovies, ...movies];
     renderMovies(movies, moviesContainer);
 
     const movieItem = document.querySelector('.movies-list-item');
@@ -152,5 +154,24 @@ function closeModal() {
 modal.addEventListener('click', event => {
   if (event.target === modal) {
     closeModal();
+  }
+});
+
+window.addEventListener('languageChange', async () => {
+  moviesContainer.innerHTML = '';
+  currentPage = 1;
+
+  let genres = [];
+  let movies = [];
+  try {
+    genres = await fetchGenres();
+    renderGenres(genres, genresContainer);
+
+    if (genreId) {
+      movies = await fetchMoviesByGenre(genreId, currentPage, PER_PAGE);
+      renderMovies(movies, moviesContainer);
+    }
+  } catch (error) {
+    console.error('Error loading movies on language change:', error.message);
   }
 });

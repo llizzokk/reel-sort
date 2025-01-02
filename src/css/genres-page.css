@@ -1,6 +1,5 @@
 .genres-page-section {
   padding: 50px 0;
-  position: relative;
 }
 
 .genres-page-container {
@@ -26,7 +25,7 @@
   letter-spacing: 0.05em;
   color: #dfe0e2;
   border-radius: 4px;
-  width: 150px;
+  width: 250px;
   height: 55px;
   padding: 8px 14px;
   transition: all 250ms ease-in-out;
@@ -130,11 +129,12 @@
   letter-spacing: 0.05em;
   color: #dfe0e2;
   border-radius: 4px;
-  width: 140px;
+  width: 200px;
   height: 43px;
   border: none;
   padding: 8px 14px;
   transition: all 250ms ease-in-out;
+  margin-bottom: 20px;
 }
 
 .btn:hover {
@@ -155,6 +155,10 @@
 
   .movies-item-img {
     height: 260px;
+  }
+
+  .btn {
+    margin-bottom: 0;
   }
 }
 

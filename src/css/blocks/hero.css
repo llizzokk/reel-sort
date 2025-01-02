@@ -55,7 +55,7 @@
   color: #dfe0e2;
   text-align: center;
   border-radius: 4px;
-  width: 180px;
+  width: 210px;
   padding: 8px 14px;
   transition: all 250ms ease-in-out;
 
@@ -100,7 +100,7 @@
   }
   .hero-button {
     font-size: 20px;
-    width: 220px;
+    width: 260px;
   }
 }
 

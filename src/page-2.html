@@ -26,7 +26,7 @@
     <section class="section genres-page-section">
       <div class="container genres-page-container">
         <div class="dropdown">
-          <button class="dropdown-button">Select genre</button>
+          <button class="lang dropdown-button" data-key="genres-page-button">Select genre</button>
           <div class="genresContainer">
           </div>
         </div>
@@ -48,7 +48,7 @@
         <ul class="moviesContainer"></ul>
         <p class="error-hidden error">Whoops, looks like something went wrong...</p>
       </div>
-      <button type="button" id="load-btn" class="load-more-hidden">Load more</button>
+      <button type="button" id="load-btn" class="lang load-more-hidden" data-key="load-more">Load more</button>
       <load src="./partials/back-link.html" />
     </section>
     <div class="modal hidden">
@@ -70,6 +70,7 @@
   <script type="module" src="./genres-page.js"></script>
   <script type="module" src="./js/top-link.js"></script>
   <script type="module" src="./js/genresMenu.js"></script>
+  <script type="module" src="./js/lang-toggle.js"></script>
 </body>
 
 </html>

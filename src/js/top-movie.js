@@ -1,7 +1,7 @@
 'use strict';
 
-import '../css/styles.css';
 import axios from 'axios';
+import '../css/styles.css';
 import 'loaders.css';
 
 const BASE_URL = 'https://api.themoviedb.org/3';
@@ -12,51 +12,52 @@ const container = document.querySelector('.top-movie-list');
 const loader = document.querySelector('.loader-container');
 const errorMessage = document.querySelector('.error');
 
-async function serviceMovie() {
-  const { data } = await axios(`${BASE_URL}${END_POINT}`, {
-    params: {
-      api_key: API_KEY,
-    },
-  });
+async function loadMovies() {
+  loader.style.display = 'block';
 
-  return data.results;
-}
+  try {
+    const { data } = await axios(`${BASE_URL}${END_POINT}`, {
+      params: {
+        api_key: API_KEY,
+        language: window.currentLanguage || 'en',
+      },
+    });
 
-serviceMovie()
-  .then(movies => {
-    loader.style.display = 'block';
-    const moviesMarkup = createMarkup(movies);
+    const moviesMarkup = createMarkup(data.results);
+    container.innerHTML = '';
     container.insertAdjacentHTML('beforeend', moviesMarkup);
 
-    const duplicateMarkup = createMarkup(movies);
+    const duplicateMarkup = createMarkup(data.results);
     container.insertAdjacentHTML('beforeend', duplicateMarkup);
 
     const movieCardWidth = container.firstElementChild.offsetWidth;
-    const totalMovies = movies.length * 2;
+    const totalMovies = data.results.length * 2;
     const containerWidth = (movieCardWidth + 16) * totalMovies;
 
     container.style.width = `${containerWidth}px`;
-
     container.style.animationDuration = `${totalMovies * 2}s`;
-  })
-  .catch(error => {
-    console.log(error.message);
+  } catch (error) {
+    console.error(error.message);
     errorMessage.classList.replace('error-hidden', 'error-message');
-  })
-  .finally(() => {
+  } finally {
     loader.style.display = 'none';
-  });
+  }
+}
 
 function createMarkup(arr) {
   return arr
     .map(
-      ({ poster_path, original_title, overview }) => `<li class="movie-card">
-            <img src="https://image.tmdb.org/t/p/w300${poster_path}" alt="${original_title}" class="movie-card-img" width="252" height="375">
+      ({ poster_path, title, overview }) => `<li class="movie-card">
+            <img src="https://image.tmdb.org/t/p/w300${poster_path}" alt="${title}" class="movie-card-img" width="252" height="375">
             <div class="movie-card-overlay">
-              <h3 class="movie-card-title">${original_title}</h3>
+              <h3 class="movie-card-title">${title}</h3>
               <p class="movie-card-description">${overview}</p>
             </div>
         </li>`
     )
     .join('');
 }
+
+loadMovies();
+
+window.addEventListener('languageChange', loadMovies);

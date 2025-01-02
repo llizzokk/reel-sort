@@ -20,6 +20,7 @@ const modalInfo = document.querySelector('.modal-info');
 
 let currentPage = 1;
 let currentSearch = '';
+let movies = [];
 
 async function serviceTopMovie(searchValue = '', page = 1) {
   const endpoint = searchValue ? SEARCH_ENDPOINT : TOP_RATED_ENDPOINT;
@@ -30,6 +31,7 @@ async function serviceTopMovie(searchValue = '', page = 1) {
       params: {
         api_key: API_KEY,
         query: searchValue,
+        language: window.currentLanguage || 'en',
         page,
       },
     });
@@ -46,7 +48,7 @@ async function serviceTopMovie(searchValue = '', page = 1) {
 
 (async function loadInitialMovies() {
   try {
-    const movies = await serviceTopMovie();
+    movies = await serviceTopMovie();
     renderMovies(movies);
   } catch (error) {
     console.log(error.message);
@@ -73,16 +75,19 @@ function renderMovies(movies) {
   errorMessage.classList.replace('error-message', 'error-hidden');
   const moviesMarkup = createTopMarkup(movies);
   container.insertAdjacentHTML('beforeend', moviesMarkup);
-
-  const movieItems = document.querySelectorAll('.movies-list-item');
-  movieItems.forEach((item, index) => {
-    item.addEventListener('click', () => handleMovieClick(movies[index]));
-  });
 }
 
 button.addEventListener('click', handleLoad);
 form.addEventListener('submit', handleSubmit);
 modalCloseBtn.addEventListener('click', closeModal);
+
+container.addEventListener('click', event => {
+  const movieItem = event.target.closest('.movies-list-item');
+  if (movieItem) {
+    const index = [...container.children].indexOf(movieItem);
+    handleMovieClick(movies[index]);
+  }
+});
 
 async function handleLoad() {
   button.classList.replace('btn', 'load-more-hidden');
@@ -90,8 +95,9 @@ async function handleLoad() {
   currentPage += 1;
 
   try {
-    const movies = await serviceTopMovie(currentSearch, currentPage);
-    renderMovies(movies);
+    const newMovies = await serviceTopMovie(currentSearch, currentPage);
+    movies = [...movies, ...newMovies];
+    renderMovies(newMovies);
 
     const movieItem = document.querySelector('.movies-list-item');
     if (movieItem) {
@@ -126,7 +132,7 @@ async function handleSubmit(event) {
   button.classList.replace('btn', 'load-more-hidden');
 
   try {
-    const movies = await serviceTopMovie(searchValue, currentPage);
+    movies = await serviceTopMovie(searchValue, currentPage);
     renderMovies(movies);
 
     if (movies.length > 0) {
@@ -164,5 +170,19 @@ function closeModal() {
 modal.addEventListener('click', event => {
   if (event.target === modal) {
     closeModal();
+  }
+});
+
+window.addEventListener('languageChange', async () => {
+  container.innerHTML = '';
+  currentSearch = '';
+  currentPage = 1;
+  movies = [];
+
+  try {
+    movies = await serviceTopMovie();
+    renderMovies(movies);
+  } catch (error) {
+    console.error('Error loading movies on language change:', error.message);
   }
 });

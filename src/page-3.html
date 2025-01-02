@@ -27,7 +27,7 @@
       <div class="container top-page-container">
         <form class="top-form">
           <input type="text" name="search" class="top-input">
-          <button type="submit" class="top-button">Search</button>
+          <button type="submit" class="lang top-button" data-key="search-page-button">Search</button>
         </form>
         <div class="loader-container">
           <div class="loader-inner ball-grid-pulse">
@@ -46,7 +46,7 @@
         <p class="error-hidden error">Whoops, looks like something went wrong...</p>
         <ul class="moviesContainer"></ul>
       </div>
-      <button type="button" id="top-load-btn" class="load-more-hidden">Load more</button>
+      <button type="button" id="top-load-btn" class="lang load-more-hidden" data-key="load-more">Load more</button>
       <load src="./partials/back-link.html" />
     </section>
     <div class="modal hidden">
@@ -68,6 +68,7 @@
 
   <script type="module" src="./top-page.js"></script>
   <script type="module" src="./js/top-link.js"></script>
+  <script type="module" src="./js/lang-toggle.js"></script>
 </body>
 
 </html>

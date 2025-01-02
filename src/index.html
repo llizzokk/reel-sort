@@ -27,17 +27,19 @@
   <main>
     <section class="section hero-section">
       <div class="container hero-container">
-        <h1 class="hero-title">Your guide to the world of cinema.</h1>
-        <p class="hero-text">Thousands of movies are waiting to tell you their stories. Choose a genre, add a touch of
+        <h1 class="lang hero-title" data-key="hero-title">Your guide to the world of cinema.</h1>
+        <p class="lang hero-text" data-key="hero-text">Thousands of movies are waiting to tell you their stories. Choose
+          a genre,
+          add a touch of
           mood — and enjoy!</p>
-        <a class="hero-button" href="#feedback">Leave a review</a>
+        <a class="lang hero-button" href="#feedback" data-key="hero-button">Leave a review</a>
         <img srcset="./img/hero/hero.webp 1x, ./img/hero/hero@2x.webp 2x" src="./img/hero/hero.webp" alt="film"
           class="hero-img" width="579" height="555" />
       </div>
     </section>
     <section class="section top-movie-section">
       <div class="container top-movie-container">
-        <h2 class="top-movie-title">Top Movies of the Week</h2>
+        <h2 class="lang top-movie-title" data-key="top-movie-title">Top Movies of the Week</h2>
         <div class="loader-container">
           <div class="loader-inner ball-grid-pulse">
             <div></div>
@@ -56,7 +58,7 @@
           <ul class="top-movie-list"></ul>
         </div>
 
-        <a href="./page-3.html" class="top-movie-btn" target="_blank">See more</a>
+        <a href="./page-3.html" class="lang top-movie-btn" target="_blank" data-key="top-movie-button">See more</a>
       </div>
     </section>
     <section class="section genres-section">
@@ -64,26 +66,27 @@
         <img srcset="./img/genres/reel.webp 1x, ./img/genres/reel@2x.webp 2x" src="./img/genres/reel.webp" alt="film"
           class="genres-img" width="579" height="555" />
         <div class="genres-info">
-          <h2 class="genres-title">Beloved by Our Audience</h2>
+          <h2 class="lang genres-title" data-key="genres-title">Beloved by Our Audience</h2>
           <ul class="genres-list">
-            <li class="genres-item"><a href="./page-2.html?genre=18&genreName=Drama">
+            <li class="genres-item"><a href="./page-2.html?genre=18&genreName=Drama" class="lang"
+                data-key="genres-drama">
                 <svg class="genres-more-icon" width="24" height="24">
                   <use href="./img/icon.svg#icon-arrow-narrow-left" />
                 </svg>Drama</a></li>
-            <li class="genres-item"><a href="./page-2.html?genre=35&genreName=Comedy"><svg class="genres-more-icon"
-                  width="24" height="24">
+            <li class="genres-item"><a href="./page-2.html?genre=35&genreName=Comedy" class="lang"
+                data-key="genres-comedy"><svg class="genres-more-icon" width="24" height="24">
                   <use href="./img/icon.svg#icon-arrow-narrow-left" />
                 </svg>Comedy</a></li>
-            <li class="genres-item"><a href="./page-2.html?genre=28&genreName=Action"><svg class="genres-more-icon"
-                  width="24" height="24">
+            <li class="genres-item"><a href="./page-2.html?genre=28&genreName=Action" class="lang"
+                data-key="genres-action"><svg class="genres-more-icon" width="24" height="24">
                   <use href="./img/icon.svg#icon-arrow-narrow-left" />
                 </svg>Action</a></li>
-            <li class="genres-item"><a href="./page-2.html?genre=12&genreName=Adventure"><svg class="genres-more-icon"
-                  width="24" height="24">
+            <li class="genres-item"><a href="./page-2.html?genre=12&genreName=Adventure" class="lang"
+                data-key="genres-adventure"><svg class="genres-more-icon" width="24" height="24">
                   <use href="./img/icon.svg#icon-arrow-narrow-left" />
                 </svg>Adventure</a></li>
-            <li class="genres-item"><a href="./page-2.html?genre=27&genreName=Horror"><svg class="genres-more-icon"
-                  width="24" height="24">
+            <li class="genres-item"><a href="./page-2.html?genre=27&genreName=Horror" class="lang"
+                data-key="genres-horror"><svg class="genres-more-icon" width="24" height="24">
                   <use href="./img/icon.svg#icon-arrow-narrow-left" />
                 </svg>Horror</a></li>
           </ul>
@@ -92,12 +95,12 @@
     </section>
     <section class="section advantages-section">
       <div class="container advantages-container">
-        <h2 class="advantages-title">Why Choose Us?</h2>
+        <h2 class="lang advantages-title" data-key="advantages-title">Why Choose Us?</h2>
         <ul id="ac-list" class="ac-list">
           <li class="accordion-item ac">
             <h3 class="accordion-title ac-header">
               <button type="button" class="ac-trigger">
-                <span class="ac-state">
+                <span class="lang ac-state" data-key="advantages-title1">
                   User-Friendly and Intuitive Interface</span>
 
                 <svg class="icon-drop-down" width="24" height="24">
@@ -106,7 +109,7 @@
               </button>
             </h3>
             <div class="ac-panel">
-              <p class="accordion-answer">
+              <p class="lang accordion-answer" data-key="advantages-text1">
                 Our website is designed with simplicity and usability in mind. Whether you're a tech-savvy user or just
                 looking for a quick movie recommendation, you'll find the interface straightforward and easy to
                 navigate. With clear categories, simple menus, and responsive design, you can effortlessly explore our
@@ -120,14 +123,14 @@
           <li class="accordion-item ac">
             <h3 class="accordion-title ac-header">
               <button type="button" class="ac-trigger">
-                <span class="ac-state"> Search the Best Movies by Title</span>
+                <span class="lang ac-state" data-key="advantages-title2"> Search the Best Movies by Title</span>
                 <svg class="icon-drop-down" width="24" height="24">
                   <use href="./img/icon.svg#icon_arrow_up"></use>
                 </svg>
               </button>
             </h3>
             <div class="ac-panel">
-              <p class="accordion-answer">
+              <p class="lang accordion-answer" data-key="advantages-text2">
                 Finding your next favorite movie is easier than ever. With our powerful search functionality, you can
                 quickly search for films by title, making it simple to access any movie you have in mind. Whether
                 you&apos;re revisiting an old classic or looking for the latest blockbuster, just type in the name and
@@ -139,14 +142,14 @@
           <li class="accordion-item ac">
             <h3 class="accordion-title ac-header">
               <button type="button" class="ac-trigger">
-                <span class="ac-state"> Search Movies by Genre</span>
+                <span class="lang ac-state" data-key="advantages-title3"> Search Movies by Genre</span>
                 <svg class="icon-drop-down" width="24" height="24">
                   <use href="./img/icon.svg#icon_arrow_up"></use>
                 </svg>
               </button>
             </h3>
             <div class="ac-panel">
-              <p class="accordion-answer">
+              <p class="lang accordion-answer" data-key="advantages-text3">
                 Not sure what you want to watch? No problem! Our genre-based search lets you explore movies based on
                 your mood or interest. From action-packed thrillers to heartwarming dramas, we offer a variety of genres
                 to choose from. Just select your preferred genre, and we&apos;ll display a curated list of movies that
@@ -159,14 +162,14 @@
           <li class="accordion-item ac">
             <h3 class="accordion-title ac-header">
               <button type="button" class="ac-trigger">
-                <span class="ac-state"> Watch Top Trending Movies</span>
+                <span class="lang ac-state" data-key="advantages-title4"> Watch Top Trending Movies</span>
                 <svg class="icon-drop-down" width="24" height="24">
                   <use href="./img/icon.svg#icon_arrow_up"></use>
                 </svg>
               </button>
             </h3>
             <div class="ac-panel">
-              <p class="accordion-answer">
+              <p class="lang accordion-answer" data-key="advantages-text4">
                 Stay up to date with what&apos;s currently making waves in the world of cinema. Our platform highlights
                 the top trending movies, so you&apos;re always in the loop when it comes to popular titles. Whether
                 it&apos;s a movie that&apos;s just hit theaters or one that&apos;s climbing the charts, you can easily
@@ -178,14 +181,14 @@
           <li class="accordion-item ac">
             <h3 class="accordion-title ac-header">
               <button type="button" class="ac-trigger">
-                <span class="ac-state"> Leave Feedback and Be Heard</span>
+                <span class="lang ac-state" data-key="advantages-title5"> Leave Feedback and Be Heard</span>
                 <svg class="icon-drop-down" width="24" height="24">
                   <use href="./img/icon.svg#icon_arrow_up"></use>
                 </svg>
               </button>
             </h3>
             <div class="ac-panel">
-              <p class="accordion-answer">
+              <p class="lang accordion-answer" data-key="advantages-text5">
                 We value your opinion! Our site allows you to leave feedback on the movies you watch, share your
                 ratings, and even write reviews. We believe in the power of community, and your voice helps others
                 discover the best films. Whether you want to share your thoughts on a film&apos;s plot, performance, or
@@ -199,80 +202,94 @@
     </section>
     <section class="section reviews-section">
       <div class="container reviews-container">
-        <h2 class="reviews-title">Reviews</h2>
+        <h2 class="lang reviews-title" data-key="reviews-title">Reviews</h2>
         <div class="swiper">
           <ul class="reviews-list swiper-wrapper">
             <li class="reviews-item swiper-slide">
-              <p class="review-text">I absolutely love this movie search site! It's so easy to find movies by genre, and
+              <p class="lang review-text" data-key="reviews-text1">I absolutely love this movie search site! It's so
+                easy to find
+                movies by genre, and
                 the sorting options are fantastic. The design is sleek, and it works perfectly on my phone too!</p>
               <div class="review-user-wrapper">
                 <img srcset="./img/reviews/sophia-turner.webp 1x, ./img/reviews/sophia-turner@2x.webp 2x"
                   src="./img/reviews/sophia-turner.webp" alt="User photo" class="review-user-photo" width="40"
                   height="40" />
-                <p class="review-user-name">Sophia Turner</p>
+                <p class="lang review-user-name" data-key="reviews-name1">Sophia Turner</p>
               </div>
             </li>
             <li class="reviews-item swiper-slide">
-              <p class="review-text">This site has quickly become my go-to for finding movies to watch. The genre
+              <p class="lang review-text" data-key="reviews-text2">This site has quickly become my go-to for finding
+                movies to watch.
+                The genre
                 filters
                 and top movie lists are super helpful, and it saves me so much time!</p>
               <div class="review-user-wrapper">
                 <img srcset="./img/reviews/michael-johnson.webp 1x, ./img/reviews/michael-johnson@2x.webp 2x"
                   src="./img/reviews/michael-johnson.webp" alt="User photo" class="review-user-photo" width="40"
                   height="40" />
-                <p class="review-user-name">Michael Johnson</p>
+                <p class="lang review-user-name" data-key="reviews-name2">Michael Johnson</p>
               </div>
             </li>
             <li class="reviews-item swiper-slide">
-              <p class="review-text">A brilliant tool for any movie lover! I enjoy how intuitive the interface is, and
+              <p class="lang review-text" data-key="reviews-text3">A brilliant tool for any movie lover! I enjoy how
+                intuitive the
+                interface is, and
                 the
                 sorting feature by genre is a game-changer. Highly recommended!</p>
               <div class="review-user-wrapper">
                 <img srcset="./img/reviews/emily-davis.webp 1x, ./img/reviews/emily-davis@2x.webp 2x"
                   src="./img/reviews/emily-davis.webp" alt="User photo" class="review-user-photo" width="40"
                   height="40" />
-                <p class="review-user-name">Emily Davis
+                <p class="lang review-user-name" data-key="reviews-name3">Emily Davis
                 </p>
               </div>
             </li>
             <li class="reviews-item swiper-slide">
-              <p class="review-text">Finding my next favorite movie has never been easier. The site is fast, responsive,
+              <p class="lang review-text" data-key="reviews-text4">Finding my next favorite movie has never been easier.
+                The site is
+                fast, responsive,
                 and packed with great features. Five stars from me!</p>
               <div class="review-user-wrapper">
                 <img srcset="./img/reviews/daniel-wilson.webp 1x, ./img/reviews/daniel-wilson@2x.webp 2x"
                   src="./img/reviews/daniel-wilson.webp" alt="User photo" class="review-user-photo" width="40"
                   height="40" />
-                <p class="review-user-name">Daniel Wilson</p>
+                <p class="lang review-user-name" data-key="reviews-name4">Daniel Wilson</p>
               </div>
             </li>
             <li class="reviews-item swiper-slide">
-              <p class="review-text">As a film enthusiast, this site is perfect for me. It&apos;s simple to use, and I
+              <p class="lang review-text" data-key="reviews-text5">As a film enthusiast, this site is perfect for me.
+                It&apos;s
+                simple to use, and I
                 always find exactly what I&apos;m looking for. Great job!</p>
               <div class="review-user-wrapper">
                 <img srcset="./img/reviews/olivia-brown.webp 1x, ./img/reviews/olivia-brown@2x.webp 2x"
                   src="./img/reviews/olivia-brown.webp" alt="User photo" class="review-user-photo" width="40"
                   height="40" />
-                <p class="review-user-name">Olivia Brown</p>
+                <p class="lang review-user-name" data-key="reviews-name5">Olivia Brown</p>
               </div>
             </li>
             <li class="reviews-item swiper-slide">
-              <p class="review-text">I was amazed by how well-organized everything is on this site. Searching by genre
+              <p class="lang review-text" data-key="reviews-text6">I was amazed by how well-organized everything is on
+                this site.
+                Searching by genre
                 makes it so convenient. This is exactly what I needed!</p>
               <div class="review-user-wrapper">
                 <img srcset="./img/reviews/james-taylor.webp 1x, ./img/reviews/james-taylor@2x.webp 2x"
                   src="./img/reviews/james-taylor.webp" alt="User photo" class="review-user-photo" width="40"
                   height="40" />
-                <p class="review-user-name">James Taylor</p>
+                <p class="lang review-user-name" data-key="reviews-name6">James Taylor</p>
               </div>
             </li>
             <li class="reviews-item swiper-slide">
-              <p class="review-text">The website is fantastic! I use it almost daily to find something interesting to
+              <p class="lang review-text" data-key="reviews-text7">The website is fantastic! I use it almost daily to
+                find something
+                interesting to
                 watch. The top movies section is my favorite part.</p>
               <div class="review-user-wrapper">
                 <img srcset="./img/reviews/ava-martinez.webp 1x, ./img/reviews/ava-martinez@2x.webp 2x"
                   src="./img/reviews/ava-martinez.webp" alt="User photo" class="review-user-photo" width="40"
                   height="40" />
-                <p class="review-user-name">Ava Martinez</p>
+                <p class="lang review-user-name" data-key="reviews-name7">Ava Martinez</p>
               </div>
             </li>
           </ul>
@@ -296,14 +313,15 @@
     <section class="section feedback-section" id="feedback-section">
       <div class="container feedback-container">
         <div class="feedback-form-wrap">
-          <h2 class="feedback-title">Leave a review</h2>
+          <h2 class="lang feedback-title" data-key="feedback-title">Leave a review</h2>
           <form class="feebdack-form" id="feedbackForm">
             <input type="text" name="username" class="feedback-input" placeholder="Full Name" required
               autocomplete="name" />
             <input type="email" name="email" class="feedback-input" placeholder="Email" required autocomplete="email" />
             <textarea name="feedback" id="feedback" class="feedback-input feedback-textarea" placeholder="Your feedback"
               required maxlength="300"></textarea>
-            <button type="submit" class="feedback-button" id="submitButton">Send</button>
+            <button type="submit" class="lang feedback-button" id="submitButton"
+              data-key="feedback-button">Send</button>
           </form>
         </div>
 
@@ -319,6 +337,7 @@
 
   <script type="module" src="./main.js"></script>
   <script type="module" src="./js/top-link.js"></script>
+  <script type="module" src="./js/lang-toggle.js"></script>
 </body>
 
 </html>
