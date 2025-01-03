@@ -12,6 +12,7 @@ const loader = document.querySelector('.loader-container');
 const modal = document.querySelector('.modal');
 const modalCloseBtn = document.querySelector('.modal-close-btn');
 const modalInfo = document.querySelector('.modal-info');
+const errorMessage = document.querySelector('.error');
 
 let currentPage = 1;
 let genreId = null;
@@ -24,15 +25,14 @@ function getQueryParam(param) {
   return urlParams.get(param);
 }
 
-function getQueryParamName(paramName) {
-  return urlParams.get(paramName);
-}
-
 genreId = getQueryParam('genre');
-const genreSelectName = getQueryParamName('genreName');
 
 async function init() {
+  let genres = [];
   try {
+    genres = await fetchGenres();
+    renderGenres(genres, genresContainer);
+
     if (genreId) {
       loader.style.display = 'flex';
       const moviesSelect = await fetchMoviesByGenre(
@@ -41,13 +41,14 @@ async function init() {
         PER_PAGE
       );
       renderMovies(moviesSelect, moviesContainer);
+
       const buttonSelect = document.querySelector('.dropdown-button');
-      buttonSelect.textContent = genreSelectName;
+      const selectedGenre = genres.find(genre => genre.id === Number(genreId));
+      if (selectedGenre) {
+        buttonSelect.textContent = selectedGenre.name;
+      }
       button.classList.replace('load-more-hidden', 'btn');
     }
-
-    const genres = await fetchGenres();
-    renderGenres(genres, genresContainer);
 
     genresContainer.addEventListener('click', async event => {
       if (event.target.classList.contains('genres-list-button')) {
@@ -80,8 +81,16 @@ async function init() {
             PER_PAGE
           );
           renderMovies(movies, moviesContainer);
+
+          const selectedGenre = genres.find(
+            genre => genre.id === Number(genreId)
+          );
+          if (selectedGenre) {
+            const buttonSelect = document.querySelector('.dropdown-button');
+            buttonSelect.textContent = selectedGenre.name;
+          }
         } catch (error) {
-          console.error('Ошибка при загрузке фильмов:', error);
+          console.error(error);
         } finally {
           loader.style.display = 'none';
         }
@@ -140,22 +149,33 @@ export function handleMovieClick(movie) {
     <h2 class="modal-title">${title}</h2>
     <p class="modal-text">Release Date: <span class="modal-text-span">${release_date}</span></p>
     <p class="modal-text">Rating: <span class="modal-text-span">${vote_average}</span></p>
-    <p class="modal-text">Overview: <span class="modal-text-span">${overview}</span></p>
+    <p class="modal-text modal-overview">Overview: <span class="modal-text-span">${overview}</span></p>
     </div>
   `;
 
   modal.classList.remove('hidden');
+  document.body.classList.add('no-scroll');
 }
 
 function closeModal() {
   modal.classList.add('hidden');
+  document.body.classList.remove('no-scroll');
 }
 
 modal.addEventListener('click', event => {
   if (event.target === modal) {
     closeModal();
+    document.body.classList.remove('no-scroll');
   }
 });
+
+function updateGenreButtonText(genres, genreId) {
+  const selectedGenre = genres.find(genre => genre.id === Number(genreId));
+  const buttonSelect = document.querySelector('.dropdown-button');
+  if (selectedGenre) {
+    buttonSelect.textContent = selectedGenre.name;
+  }
+}
 
 window.addEventListener('languageChange', async () => {
   moviesContainer.innerHTML = '';
@@ -170,6 +190,7 @@ window.addEventListener('languageChange', async () => {
     if (genreId) {
       movies = await fetchMoviesByGenre(genreId, currentPage, PER_PAGE);
       renderMovies(movies, moviesContainer);
+      updateGenreButtonText(genres, genreId);
     }
   } catch (error) {
     console.error('Error loading movies on language change:', error.message);

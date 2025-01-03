@@ -63,7 +63,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1002;
+  z-index: 1005;
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
@@ -81,6 +81,7 @@
   padding: 40px 20px 20px;
   border-radius: 4px;
   width: 300px;
+  max-height: 90%;
   position: relative;
 }
 
@@ -125,7 +126,7 @@
 .modal-title {
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   margin-bottom: 20px;
 }
 
@@ -141,6 +142,13 @@
 
 .modal-text:last-child {
   margin-bottom: 0;
+  max-height: 250px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.modal-text:last-child::-webkit-scrollbar {
+  display: none;
 }
 
 .modal-text-span {

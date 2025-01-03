@@ -17,7 +17,7 @@ export async function fetchGenres() {
     });
     return response.data.genres;
   } catch (error) {
-    console.error('Ошибка загрузки жанров:', error);
+    console.error(error.message);
     throw error;
   }
 }
@@ -34,7 +34,7 @@ export async function fetchMoviesByGenre(genreId, page = 1, perPage = 15) {
     });
     return response.data.results;
   } catch (error) {
-    console.error('Ошибка загрузки фильмов:', error);
+    console.error(error.message);
     throw error;
   }
 }

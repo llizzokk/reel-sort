@@ -3,7 +3,9 @@
 const langSelect = document.querySelector('.checkbox');
 const textElements = document.querySelectorAll('.lang');
 
-window.currentLanguage = 'en';
+window.currentLanguage = localStorage.getItem('lang') || 'en';
+
+langSelect.checked = window.currentLanguage === 'uk';
 
 langSelect.addEventListener('change', handleChange);
 
@@ -15,6 +17,9 @@ async function loadTranslations() {
 async function handleChange() {
   const isChecked = langSelect.checked;
   window.currentLanguage = isChecked ? 'uk' : 'en';
+
+  localStorage.setItem('lang', window.currentLanguage);
+
   const translations = await loadTranslations();
 
   textElements.forEach(element => {
