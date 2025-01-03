@@ -19,9 +19,9 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@800&display=swap"
     rel="stylesheet">
   <script type="module" crossorigin src="/reel-sort/index.js"></script>
-  <link rel="modulepreload" crossorigin href="/reel-sort/assets/lang-toggle-A8p9mm5l.js">
+  <link rel="modulepreload" crossorigin href="/reel-sort/assets/mob-menu-D9xKmZa1.js">
   <link rel="modulepreload" crossorigin href="/reel-sort/assets/vendor-C0Nsn3Ff.js">
-  <link rel="stylesheet" crossorigin href="/reel-sort/assets/lang-toggle-CGW2u40e.css">
+  <link rel="stylesheet" crossorigin href="/reel-sort/assets/mob-menu-YHHbvYH4.css">
   <link rel="stylesheet" crossorigin href="/reel-sort/assets/vendor-CA5tPZEM.css">
 </head>
 
@@ -49,9 +49,30 @@
         </div>
         <div class="layer-changes-mod"></div>
       </div>
+      <button class="burger js-open-menu" type="button">
+        <span class="burger-line"></span>
+      </button>
     </div>
-
-
+  </div>
+  <div class="mob-menu">
+    <div class="mob-header">
+      <a class="mob-nav-logo nav-logo" href="./index.html" aria-label="Site logo">
+        Reel<span class="nav-logo-span">Sort</span>
+      </a>
+    </div>
+    <div class="mob-menu-container">
+      <ul class="mob-nav-list nav-list">
+        <li class="mob-nav-item nav-item">
+          <a class="lang mob-nav-link nav-link {=$highlight-act}" href="./page-2.html"
+            data-key="header-button1">Genres</a>
+        </li>
+        <li class="mob-nav-item nav-item">
+          <a class="lang mob-nav-link nav-link {=$highlight-curr}" href="./page-3.html" data-key="header-button2">
+            Search
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </header>
 
@@ -382,6 +403,7 @@
         <use xlink:href="/reel-sort/assets/icon-D4NhQzEr.svg#icon_arrow_up"></use>
     </svg>
 </a>
+
 
 
 </body>
