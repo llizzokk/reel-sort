@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
+        console.log(entry);
+
         if (entry.isIntersecting) {
           topLink.classList.add('top-link-hidden');
         } else {
