@@ -89,12 +89,12 @@
   overflow: hidden;
   background-color: #37302c;
   padding: 0 0 10px 0;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  perspective: 1000px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .movies-list-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: rotateX(13deg) rotateY(-18deg);
 }
 
 .movies-item-title {

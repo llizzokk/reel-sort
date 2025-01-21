@@ -1,7 +1,7 @@
 'use strict';
 
 import './css/genres-page.css';
-import { fetchGenres, fetchMoviesByGenre } from './js/pixabay-api.js';
+import { fetchGenres, fetchMoviesByGenre } from './js/api.js';
 import { renderGenres, renderMovies } from './js/render-function.js';
 import 'loaders.css';
 

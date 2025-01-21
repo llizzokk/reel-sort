@@ -62,6 +62,7 @@
   animation: fadeIn 1s ease-out forwards;
   animation-delay: 0.6s;
 }
+
 .hero-button:hover {
   background-color: #dfe0e2;
   color: #37302c;

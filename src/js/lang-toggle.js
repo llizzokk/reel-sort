@@ -1,5 +1,8 @@
 'use strict';
 
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
 const langSelect = document.querySelector('.checkbox');
 const textElements = document.querySelectorAll('.lang');
 
@@ -10,8 +13,18 @@ langSelect.checked = window.currentLanguage === 'uk';
 langSelect.addEventListener('change', handleChange);
 
 async function loadTranslations() {
-  const response = await fetch('lang.json');
-  return await response.json();
+  try {
+    const response = await fetch('lang.json');
+    return await response.json();
+  } catch (error) {
+    window.currentLanguage = 'en';
+    langSelect.checked = !window.currentLanguage;
+    localStorage.setItem('lang', window.currentLanguage);
+    iziToast.error({
+      message: 'Language change error',
+      position: 'topCenter',
+    });
+  }
 }
 
 async function handleChange() {
