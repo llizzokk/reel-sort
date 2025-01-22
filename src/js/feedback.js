@@ -2,13 +2,18 @@
 
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+let text = 'Leave a review...';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const text = 'Leave a review...';
   const typingElement = document.querySelector('.feedback-title');
   let index = 0;
 
   function type() {
+    if (localStorage.getItem('lang') === 'uk') {
+      text = 'Залиште відгук...';
+    } else {
+      text = 'Leave a review...';
+    }
     if (index < text.length) {
       typingElement.textContent = text.slice(0, index + 1);
       index++;
