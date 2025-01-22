@@ -77,7 +77,10 @@
 }
 
 .modal-content {
-  background-color: #a45827;
+  /* background-color: #a45827; */
+  background: linear-gradient(-45deg, #403430, #a45827, #cb9878, #a45827);
+  background-size: 400% 400%;
+  animation: gradient 8s ease-in-out infinite;
   padding: 40px 20px 20px;
   border-radius: 4px;
   width: 300px;

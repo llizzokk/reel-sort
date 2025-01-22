@@ -1,5 +1,26 @@
 .hero-section {
   padding: 50px 0;
+  background: linear-gradient(-45deg, #403430, #a45827, #cb9878, #a45827);
+  background-size: 400% 400%;
+  animation: gradient 8s ease-in-out infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .hero-container {

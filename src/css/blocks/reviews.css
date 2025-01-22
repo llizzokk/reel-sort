@@ -1,5 +1,8 @@
 .reviews-section {
   padding: 50px 0;
+  background: linear-gradient(-45deg, #403430, #a45827, #cb9878, #a45827);
+  background-size: 400% 400%;
+  animation: gradient 8s ease-in-out infinite;
 }
 
 .reviews-container {
